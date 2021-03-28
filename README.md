@@ -16,9 +16,9 @@ The game includes:
 * Animations upon actions
 * Health stats
 * Multiple cards to choose from:
-* * Random Attack (from 0 to 70)
-* * Base Attack (30 damage)
-* * Random Health Boost (from 0 to 70)
+	* Random Attack (from 0 to 70)	
+	* Base Attack (30 damage)
+	* Random Health Boost (from 0 to 70)
 	
 ## Technologies
 Project is created with:
