@@ -1,0 +1,4 @@
+sprites 1 2 and 3 are all the same size. thier dimensions are:
+200px (pixels) in height 
+200px (pixels) in width
+----------------------
