@@ -1,0 +1,1 @@
+Main-Class: com.mygdx.game.desktop.DesktopLauncher

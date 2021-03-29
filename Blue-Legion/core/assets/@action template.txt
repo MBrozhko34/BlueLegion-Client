@@ -1,0 +1,1 @@
+ order=attack multiplier null=0 ,effect null=null,effect val null=0
