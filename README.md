@@ -6,7 +6,7 @@ Full Client Side Code for coursework game Blue Legion
 * [General info](#general-info)
 * [Technologies](#technologies)
 * [Features](#features)
-* [Requirements to run](#Requirements)
+* [Requirements](#Requirements)
 
 
 ## General info
@@ -29,5 +29,5 @@ Project is created with:
 * Java Websocket implementation
 
 ## Requirements
-*Java version 13 or later
-*Network connection
+* Java version 13 or later
+* Network connection
