@@ -26,7 +26,7 @@ The game includes:
 Project is created with:
 * Java Version: 13 
 * LibGDX framework
-* Java Websocket implementation
+* https://github.com/TooTallNate/Java-WebSocket Java Websocket implementation
 
 ## Requirements
 * Java version 13 or later
