@@ -6,6 +6,8 @@ Full Client Side Code for coursework game Blue Legion
 * [General info](#general-info)
 * [Technologies](#technologies)
 * [Features](#features)
+* [Requirements to run](#Requirements)
+
 
 ## General info
 Blue Legion is a turn based online multiplayer card game incorporating a variety of animations and other features. This is the the finished version. Within this repository you will find the source code for the client aswell as an executable jar file to run.
@@ -26,3 +28,6 @@ Project is created with:
 * LibGDX framework
 * Java Websocket implementation
 
+## Requirements
+*Java version 13 or later
+*Network connection
