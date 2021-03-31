@@ -21,7 +21,9 @@ The game includes:
 	* Random Attack (from 0 to 70)	
 	* Base Attack (30 damage)
 	* Random Health Boost (from 0 to 70)
-	
+
+Server code: https://github.com/Xakep1101/BlueLegion-server
+
 ## Technologies
 Project is created with:
 * Java Version: 13 
