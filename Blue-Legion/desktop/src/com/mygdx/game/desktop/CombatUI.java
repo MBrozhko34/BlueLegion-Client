@@ -62,8 +62,8 @@ public class CombatUI implements Screen {
 	private GameClient gameClient = null;
 	
 	//private String serverLocation = "ws://192.168.56.101:8887";
-	private String serverLocation = "ws://localhost:8887";
-	//private String serverLocation = "ws://ec2-3-8-233-150.eu-west-2.compute.amazonaws.com:8887";
+	//private String serverLocation = "ws://localhost:8887";
+	private String serverLocation = "ws://ec2-18-132-205-176.eu-west-2.compute.amazonaws.com:8887";
 	
 	private GameOver gO = null;
 	private GameWon gW = null;
