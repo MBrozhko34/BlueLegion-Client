@@ -45,9 +45,6 @@ public class OptionScreen implements Screen {
 		slider = new Slider(0, 100, 0.1f, false, skin);
 		slider.setWidth(300);
 		slider.setPosition(400, 500);
-
-		// checkBox = new CheckBox("", skin);
-
 	}
 
 	@Override
@@ -70,27 +67,7 @@ public class OptionScreen implements Screen {
 			}
 		});
 
-		slider.addListener(new ChangeListener() {
-
-			@Override
-			public void changed(ChangeEvent event, Actor actor) {
-				if (slider.isDragging()) {
-					//game.music.setVolume(slider.getValue() / 100f); // Controls music volume
-
-				}
-
-			}
-		});
-
-//		checkBox.addListener(new ChangeListener() {
-//			@Override
-//			public void changed(ChangeEvent event, Actor actor) {
-//				 Gdx.graphics.setContinuousRendering(checkBox.isChecked());
-//			}
-//		});
-
 		stage = new Stage(new ScreenViewport()); // Set up a stage for the ui
-//		/stage.addActor(checkBox);
 		stage.addActor(slider);
 		stage.addActor(button); // Add the button to the stage to perform rendering and take input.
 		Gdx.input.setInputProcessor(stage); // Start taking input from the ui

@@ -28,7 +28,6 @@ public class Player {
 	private String defenceStat;
 	private String equipment;
 	private Action actionBuild;
-	//private Effect effectBuild;
 	
 	private int nH = 100;
 
@@ -38,7 +37,6 @@ public class Player {
 		InputStream file = this.getClass().getResourceAsStream("/" + name + ".csv");
 		
 		try (BufferedReader reader = new BufferedReader(new InputStreamReader(file))) {
-			// skip the first (header) row
 			reader.readLine();
 			
 	        while (reader.ready()) {
@@ -59,13 +57,7 @@ public class Player {
 				this.actions[1] = data[5];
 				this.actions[2] = data[6];
 				this.actions[3] = data[7];
-				
-				//this.actionBuild.addAction(actions[0]);
-				//this.actionBuild.addAction(actions[1]);
-				//this.actionBuild.addAction(actions[2]);
-				//this.actionBuild.addAction(actions[3]);
-				// for (int count=0;count<this.actions.length-1;count++)
-				// {System.out.println(this.actions[count]);this.actionBuild.addAction(this.actions[count]);}
+
 				this.equipment = data[8];
 				String fname = data[9];
 				String path = Gdx.files.getLocalStoragePath();
@@ -80,52 +72,8 @@ public class Player {
 	        // TODO Auto-generated catch block
 	        e.printStackTrace();
 	    }
-		
-		
-//		try (Scanner sc = new Scanner(file)) {
-//
-//			sc.nextLine(); // skips first row
-//			while (sc.hasNext()) {
-//
-//				String line = sc.nextLine(); // main one that reads each line
-//				String[] data = line.split(",");
-//
-//				// System.out.println(sc.hasNext());
-//				this.name = data[0];
-//				// converting int to string then placed in data array which is a string
-//				this.health = String.valueOf(data[1]);
-//				this.originalHealth = String.valueOf(data[1]);
-//				this.attackStat = String.valueOf(data[2]);
-//				this.defenceStat = String.valueOf(data[3]);
-//
-//				// continues on
-//				this.actions[0] = data[4];
-//				this.actions[1] = data[5];
-//				this.actions[2] = data[6];
-//				this.actions[3] = data[7];
-//				
-//				//this.actionBuild.addAction(actions[0]);
-//				//this.actionBuild.addAction(actions[1]);
-//				//this.actionBuild.addAction(actions[2]);
-//				//this.actionBuild.addAction(actions[3]);
-//				// for (int count=0;count<this.actions.length-1;count++)
-//				// {System.out.println(this.actions[count]);this.actionBuild.addAction(this.actions[count]);}
-//				this.equipment = data[8];
-//				this.sprite = new Texture(Gdx.files.internal(data[9]));
-//				this.rounds=0;
-//
-////				for (int count = 0; count <= 3; count++) {
-////					this.actions[count] = data.split(",")[4 + count];
-////					actionBuild.addAction(this.actions[count]);
-////				}
-//
-//			}
-//		}
 	}
 
-//	public ArrayList<String[]> getEffectList() {
-//		return this.effectBuild.getEffectList();
-//	}
 	public int getRoundsWon() {return this.rounds;}
 	public void resetRounds() {this.rounds=0;}
 	public void addRound() {this.rounds +=1;}
@@ -220,10 +168,4 @@ public class Player {
 		reader.close();
 		return data;
 	}
-	// retrieves the data for the specified attack from the hashmap.
-	// It has been done in this fashon because it is easier for us (the dev's) to
-	// code "around" this
-//	public Action getActionData(String name) {
-//		return this.actionBuild.getActionData(name);
-//	}
 }

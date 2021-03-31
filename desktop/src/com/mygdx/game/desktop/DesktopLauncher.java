@@ -21,15 +21,10 @@ public class DesktopLauncher {
 		// used
 		System.out.println("Started");
 		config.height = 800;
- 
 		config.width = 1000;
 		config.resizable=false;
 		// locks the frame rate
 		config.foregroundFPS = 30;
- 		// new LwjglApplication(new CombatUI("goblin_left","goblin_right"), config);
-		  new LwjglApplication(new GameObj(), config); //GameObj is the controller for the screens it decides what runs first 
-	 
-
+		new LwjglApplication(new GameObj(), config); //GameObj is the controller for the screens it decides what runs first 
 	}
-
 }

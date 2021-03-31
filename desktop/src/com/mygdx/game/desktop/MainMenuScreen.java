@@ -59,12 +59,7 @@ public class MainMenuScreen implements Screen { // where the button will be
 			public void clicked(InputEvent event, float x, float y) {
 				player1=new Player("goblin_left");
 				player2=new Player("vampire_right");
-				//((Game) Gdx.app.getApplicationListener()).setScreen(new CombatUI(game, "goblin_left", "vampire_right"));
 				((Game) Gdx.app.getApplicationListener()).setScreen(new CombatUI(game, player1, player2));
-				//((Game) Gdx.app.getApplicationListener()).setScreen(new GameOver(game));
-
-			
-				//game.music.play();
 			}
 		});
 		
@@ -130,7 +125,6 @@ public class MainMenuScreen implements Screen { // where the button will be
 	@Override
 	public void dispose() {
 		stage.dispose();
-		//game.rainMusic.dispose();
 	}
  
 }

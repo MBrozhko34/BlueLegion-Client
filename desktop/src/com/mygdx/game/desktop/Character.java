@@ -117,9 +117,4 @@ public class Character implements ApplicationListener {
 		// TODO Auto-generated method stub
 		
 	}
-//	public void setCharacter(String name) {
-//		new Character(name);
-//		// TODO Auto-generated method stub
-//		
-//	}
 }

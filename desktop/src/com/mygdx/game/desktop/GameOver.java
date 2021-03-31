@@ -43,9 +43,6 @@ public class GameOver implements Screen {
 		this.game = game;
 		font = new BitmapFont();
 		batch = new SpriteBatch();
-
-		// checkBox = new CheckBox("", skin);
-
 	}
 	
 	public GameObj getGame() {
@@ -58,8 +55,6 @@ public class GameOver implements Screen {
 	
 	@Override
 	public void show() { // first to get called
-		//font = new BitmapFont();
-//		batch = new SpriteBatch();
 
 		myTexture = new Texture(Gdx.files.internal("back_button.png"));
 		gameOver = new Texture(Gdx.files.internal("graveGameOver.png")); // gameOver image

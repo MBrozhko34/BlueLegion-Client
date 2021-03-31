@@ -31,14 +31,9 @@ public class Effects implements ApplicationListener {
 	
 	private String name;
 
-	public Effects(String name, int cols, int rows) {
+	public Effects(String name, int cols, int rows) {	
+		this.name = name;
 		
-	
-		
-	 this.name = name;
-		
- 
-
 		// Load the sprite sheet as a Texture
 		walkSheet = new Texture(Gdx.files.internal(name+".png"));
 
@@ -126,10 +121,5 @@ public class Effects implements ApplicationListener {
 		// TODO Auto-generated method stub
 		
 	}
-//	public void setCharacter(String name) {
-//		new Character(name);
-//		// TODO Auto-generated method stub
-//		
-//	}
 
 }

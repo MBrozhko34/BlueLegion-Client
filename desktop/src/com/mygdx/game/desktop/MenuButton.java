@@ -37,10 +37,7 @@ public class MenuButton implements Screen {
 
 	public MenuButton() {
 		music = Gdx.audio.newMusic(Gdx.files.internal("fantasy.mp3"));
-//		music.play();
 		music.setLooping(true);
-		// batch = new SpriteBatch();
-		// img = new Texture("badlogic.jpg");
 		Skin skin = new Skin(Gdx.files.internal("uiskin.json"));
 
 		slider = new Slider(0, 100, 0.1f, false, skin); 
@@ -51,12 +48,11 @@ public class MenuButton implements Screen {
 			public void changed(ChangeEvent event, Actor actor) {
 				if (slider.isDragging()) {
 					  music.setVolume(slider.getValue() / 100f); // Controls music volume
-
 				}
 
 			}
 		});
-//menu button 
+
 		table = new Table();
 		table.setVisible(false);
 		stage2 = new Stage();
@@ -105,11 +101,6 @@ public class MenuButton implements Screen {
 		button5.addListener(new ClickListener() {
 			@Override
 			public void clicked(InputEvent event, float x, float y) {
-				// System.out.println("going to pvp...");
-//				((Game) Gdx.app.getApplicationListener()).setScreen(new OptionScreen(game));
-
-				// System.exit(0); //exits
-				// game.music.play();
 				table.setVisible(false);
 			}
 		});
@@ -125,24 +116,14 @@ public class MenuButton implements Screen {
 		table.row();
 		table.add(button5).colspan(2).padTop(40);
 	
-
-		//table.debug();
-//	stage2.addActor(table);
-
-//	table.setVisible(true);
 		stage = new Stage(new ScreenViewport()); // Set up a stage for the ui
-		//stage.addActor(button); // Add the button to the stage to perform rendering and take input.
-		// stage.addActor(button4);
-		//stage.addActor(table);
-		// table.setVisible(false);
-		//Gdx.input.setInputProcessor(stage); // Start taking input from the ui
 	}
 
 	@Override
-	public void show() { // first to get called
-
+	public void show() { 
 
 	}
+	
 	public Table getTable() {
 		return table;
 	}

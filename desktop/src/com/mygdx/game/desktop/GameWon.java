@@ -1,3 +1,7 @@
+/**
+ * Created by Michael Brozhko - finished on 29.03.2021
+ */
+
 package com.mygdx.game.desktop;
 
 import com.badlogic.gdx.Game;

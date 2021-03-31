@@ -14,11 +14,7 @@ public class GameObj extends Game {// games to handle game menues
 
 	@Override
 	public void create() {
-//when run this is the first screen to display 
-		 //this.setScreen(new CombatUI(this, "goblin_left", "vampire_right"));
 		 this.setScreen(new MainMenuScreen(this));
-//		 music=Gdx.audio.newMusic(Gdx.files.internal("rain.mp3"));
-//		 music.setLooping(true);
 	}
 
 	@Override

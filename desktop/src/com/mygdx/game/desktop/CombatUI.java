@@ -1,3 +1,7 @@
+/**
+ * Created by Saleh Ali, Michael Brozhko, Stanley Fraser - finished on 29.03.2021
+ */
+
 package com.mygdx.game.desktop;
 
 import java.io.FileNotFoundException;
@@ -34,8 +38,6 @@ public class CombatUI implements Screen {
 	private SpriteBatch healthbar1;
 	private BitmapFont font;
 	private Player player1;
-	// This is going to be a 'dummy' which is going to take the place of
-	// player 2 until the network features have been implemented
 	private Player player2;
 	private String random1;
 	private String random2;
@@ -52,7 +54,6 @@ public class CombatUI implements Screen {
 	private Card basic_attack;
 	private MenuButton menuButton;
 	private int r = ThreadLocalRandom.current().nextInt(4, 8);
-	// private int health = 100;
 	private Texture blank;
 	
 	private Character character1 = null;
@@ -62,7 +63,7 @@ public class CombatUI implements Screen {
 	
 	//private String serverLocation = "ws://192.168.56.101:8887";
 	private String serverLocation = "ws://localhost:8887";
-	//private String serverLocation = "ws://ec2-3-8-233-150.eu-west-2.compute.amazonaws.com:8887";
+	//private String serverLocation = "ws://ec2-18-132-205-176.eu-west-2.compute.amazonaws.com:8887";
 	
 	private GameOver gO = null;
 	private GameWon gW = null;
@@ -93,7 +94,6 @@ public class CombatUI implements Screen {
 	
 	// takes the two players characters as paramaters and creates the relevant
 	// assets
-	// public CombatUI(GameObj game, String player1Char, String player2Char) {
 	public CombatUI(GameObj game, Player player1, Player player2) {
 		this.game = game; // needed to display screen
 		// this.p1 = player1Char;
@@ -374,38 +374,6 @@ public class CombatUI implements Screen {
 		batch.draw(this.logo, Gdx.graphics.getWidth() / 2 - 100, Gdx.graphics.getHeight() - 250, 200, 200);
 		// putting player 1's details onto the screen:
 
-//player 1
-		//font.draw(batch, "player 1", 150, Gdx.graphics.getHeight() - 70);
-		
-//		if(wantSeeP1) {
-//			font.draw(batch, "YOUR TURN", 150, Gdx.graphics.getHeight() - 50);
-//		}
-
-		batch.draw(player1.getSprite(), (int) p1Pos, (int) Math.round(Gdx.graphics.getHeight()*0.20), 250, 330);
-		
-		/*
-		 * // block card // ----------- // block command font.draw(batch, "Block",
-		 * Gdx.graphics.getWidth() / 16, Gdx.graphics.getHeight() / 4); // action 1 card
-		 * // ------- // action 1 command font.draw(batch, player1.getActions()[0],
-		 * Gdx.graphics.getWidth() / 16 + 110, Gdx.graphics.getHeight() / 4); // action
-		 * 2 card // ---------- // action 2 command font.draw(batch, this.random1,
-		 * Gdx.graphics.getWidth() / 16 + 220, Gdx.graphics.getHeight() / 4); // putting
-		 * player 2's details onto the screen // health // font.draw(batch, "Health:" +
-		 * Integer.parseInt(player1.getHealth()), 150, // Gdx.graphics.getHeight() -
-		 * 150);
-		 */
-		// name
-		//font.draw(batch, "player 2", Gdx.graphics.getWidth() - 100, Gdx.graphics.getHeight() - 70);
-		
-//		if(wantSeeP2) {
-//			font.draw(batch, "YOUR TURN", Gdx.graphics.getWidth() - 100, Gdx.graphics.getHeight() - 50);
-//		}
-// player 2
-		// sprite
-		batch.draw(player2.getSprite(), (int) p2Pos, (int) Math.round(Gdx.graphics.getHeight()*0.20), 250, 400);
-		// stops drawing things on the screen
-		
-		
 		if(gameClient.getMessage() == "YOUR_TURN") {
 			while(p1Pos < p2Pos) {
 				p1Pos=p1Pos+5;

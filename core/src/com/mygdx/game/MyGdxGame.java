@@ -27,29 +27,17 @@ public class MyGdxGame extends ApplicationAdapter {
 
 	@Override
 	public void create() {
-
 		batch = new SpriteBatch();
-//		img = new Texture(Gdx.files.internal("Goblin right.png"));
 		img = new Texture(Gdx.files.internal("Goblin right.png"));
-
 		FileHandle handle = Gdx.files.internal("data/glare.txt");
-		// System.out.println(handle.readString());
-
 		File file = new File("data/goblin.csv");
 
 		try (Scanner sc = new Scanner(file)) {
-			// sc.nextLine();
-//			String []data = null;
-//			String line = sc.nextLine();
-			// a way to skip the first row
-//			/sc.next();
 			sc.nextLine();
 			while (sc.hasNext()) {
 				
 				String line = sc.nextLine();
 				String[] data = line.split(","); 
-
-				// System.out.println(sc.hasNext());
 				this.name = data[0];
 				// converting int to string then placed in data array which is a string
 				this.health = String.valueOf(data[1]);
@@ -64,15 +52,10 @@ public class MyGdxGame extends ApplicationAdapter {
 				this.equipment = data[8];
 				this.sprite = new Texture(Gdx.files.internal(data[9]));
 			}
-
 		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
- 
 	}
-
-
 
 	@Override
 	public void render() {

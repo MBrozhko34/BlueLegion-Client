@@ -1,3 +1,7 @@
+/**
+ * Created by Michael Brozhko - finished on 29.03.2021
+ */
+
 package com.mygdx.game.desktop;
 
 import java.net.URI;
@@ -26,19 +30,10 @@ public class GameClient extends WebSocketClient {
 	public GameClient(URI serverUri, CombatUI gameUI) {
 		super(serverUri);
 		this.gameUI = gameUI;
-		
-		// TODO Auto-generated constructor stub
 	}
-	
-//	public GameClient(URI serverUri) {
-//	    super(serverUri, new Draft_6455());
-//	}
-//	
-	//Use  .send(String)  method for sending stuff to server
 
 	@Override
 	public void onOpen(ServerHandshake handshakedata) {
-		// TODO Auto-generated method stub
 		System.out.println("Connection Opened");
 	}
 	
@@ -48,17 +43,14 @@ public class GameClient extends WebSocketClient {
 	
 	@Override
 	public void onMessage(String message) {
-		// TODO Auto-generated method stub
 		System.out.println("Message received: " + message);
 		String delims = "[ ]+";
 		String[] tokens = message.split(delims);
 		if(tokens.length > 0) {
 			mes = tokens[0];
 			if(tokens[0].equals("YOUR_TURN")) {
-				// ToDo: enable action button
 				myTurn = true;
 			} else if(tokens[0].equals("OTHER_TURN")) {
-				// ToDo: disable action button
 				myTurn = false;
 			} else if(tokens[0].equals("NEW_HEALTH")) {
 				int newHealth = Integer.parseInt(tokens[1]);
@@ -103,16 +95,13 @@ public class GameClient extends WebSocketClient {
 
 	@Override
 	public void onClose(int code, String reason, boolean remote) {
-		// TODO Auto-generated method stub
 		System.out.println("Connection closed");
 		
 	}
 
 	@Override
 	public void onError(Exception ex) {
-		// TODO Auto-generated method stub
 		System.out.println("Error communicating with server: ");
 		ex.printStackTrace();
 	}
-
 }

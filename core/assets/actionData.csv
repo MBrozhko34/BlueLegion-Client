@@ -1,0 +1,5 @@
+name,type,effect,effect value,damage
+punch,attack,none,0,10
+roundhouse kick,attack,none,0,15
+focus,effect,attack,30,0
+flying kick,attack,defence,10,20
