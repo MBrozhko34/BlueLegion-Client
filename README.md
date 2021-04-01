@@ -12,6 +12,8 @@ Full Client Side Code for coursework game Blue Legion
 ## General info
 Blue Legion is a turn based online multiplayer card game incorporating a variety of animations and other features. This is the the finished version. Within this repository you will find the source code for the client aswell as an executable jar file to run.
 
+See downloads for current versions as jar files: https://github.com/Xakep1101/BlueLegion-Client/tree/main/downloads
+
 ## Features
 The game includes:
 * Turn based logic
